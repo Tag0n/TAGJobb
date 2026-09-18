@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - JobFinder</title>
+    <link rel="stylesheet" href="index1.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-logo">
+            <a href="index.html">
+                <span>Job</span>Finder
+            </a>
+        </div>
+        <div class="auth-card">
+            <h1>Create Account</h1>
+            <p class="auth-subtitle">
+                Create an account and start finding jobs.
+            </p>
+            <form id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">
+                            First Name
+                        </label>
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="First name"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">
+                            Last Name
+                        </label>
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="Last name"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">
+                        Password
+                    </label>
+                    <div class="password-box">
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            required
+                        >
+                        <button
+                            type="button"
+                            class="show-password"
+                            onclick="togglePassword('registerPassword', this)"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+                <label class="terms">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+                    <span>
+                        I agree to the terms and conditions.
+                    </span>
+                </label>
+                <button type="submit" class="auth-btn">
+                    Create Account
+                </button>
+                <p id="registerMessage" class="form-message"></p>
+            </form>
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+            <p class="switch-auth">
+                Already have an account?
+                <a href="login.html">
+                    Login
+                </a>
+            </p>
+        </div>
+        <p class="auth-footer">
+            © 2026 JobFinder. All rights reserved.
+        </p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

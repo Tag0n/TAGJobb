@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaGJobb - Find Your Dream Job</title>
+
+    <link rel="stylesheet" href="./index1.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>Job</span>Finder
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#jobs">Find Jobs</a>
+            <a href="#companies">Companies</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-buttons">
+    <button class="login-btn" onclick="window.location.href='login.html'">
+        Login
+    </button>
+
+    <button class="register-btn" onclick="window.location.href='register.html'">
+        Register
+    </button>
+</div>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </header>
+
+    
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-small">FIND YOUR NEXT OPPORTUNITY</p>
+
+            <h1>
+                Find a job that
+                <span>fits your life.</span>
+            </h1>
+
+            <p class="hero-text">
+                Search thousands of jobs from companies and organizations
+                looking for talented people like you.
+            </p>
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <div class="search-input">
+                    <span><img src="./images/searchicon.png" alt=""></span>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Job title, keyword or company"
+                    >
+                </div>
+
+                <div class="search-input">
+                    <span><img src="./images/locationicon.png" alt=""></span>
+                    <input
+                        type="text"
+                        id="locationInput"
+                        placeholder="Location"
+                    >
+                </div>
+
+                <button id="searchBtn">
+                    Search Jobs
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <div class="section-heading">
+
+            <p>EXPLORE OPPORTUNITIES</p>
+
+            <h2>Popular Job Categories</h2>
+
+        </div>
+
+        <div class="category-container">
+
+            <button class="category-card" data-category="Technology">
+                <span><img src="./images/tech2.png" alt=""></span>
+                <h3>Technology</h3>
+                <p>25 Jobs</p>
+            </button>
+
+            <button class="category-card" data-category="Banking">
+                <span><img src="./images/bankk.png" alt=""></span>
+                <h3>Banking</h3>
+                <p>18 Jobs</p>
+            </button>
+
+            <button class="category-card" data-category="Healthcare">
+                <span><img src="./images/royalcarehospital.png" alt=""></span>
+                <h3>Healthcare</h3>
+                <p>20 Jobs</p>
+            </button>
+
+            <button class="category-card" data-category="Education">
+                <span><img src="./images/schoolicontwo.png" alt=""></span>
+                <h3>Education</h3>
+                <p>15 Jobs</p>
+            </button>
+
+            <button class="category-card" data-category="Business">
+                <span><img src="./images/businessicon.png" alt=""></span>
+                <h3>Business</h3>
+                <p>12 Jobs</p>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOBS ================= -->
+
+    <section class="jobs-section" id="jobs">
+
+        <div class="jobs-header">
+
+            <div>
+                <p>OPPORTUNITIES</p>
+                <h2>Latest Jobs</h2>
+            </div>
+
+            <button id="clearFilters" class="clear-btn">
+                Clear Filters
+            </button>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <select id="categoryFilter">
+
+                <option value="">All Categories</option>
+                <option value="Technology">Technology</option>
+                <option value="Banking">Banking</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Education">Education</option>
+                <option value="Business">Business</option>
+
+            </select>
+
+
+            <select id="typeFilter">
+
+                <option value="">All Job Types</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Internship">Internship</option>
+                <option value="Contract">Contract</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- JOB RESULTS -->
+
+        <div id="jobCount" class="job-count"></div>
+
+        <div id="jobsContainer" class="jobs-container">
+            <!-- JavaScript will add jobs here -->
+        </div>
+
+        <div id="noJobs" class="no-jobs">
+
+            <h3>No jobs found</h3>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COMPANIES ================= -->
+
+    <section class="companies" id="companies">
+
+        <div class="section-heading">
+
+            <p>TOP EMPLOYERS</p>
+
+            <h2>Companies Hiring</h2>
+
+        </div>
+
+        <div class="company-container">
+
+            <div class="company">
+                🏦
+                <h3>ABC Bank</h3>
+            </div>
+
+            <div class="company">
+                🏥
+                <h3>City Hospital</h3>
+            </div>
+
+            <div class="company">
+                💻
+                <h3>Tech Solutions</h3>
+            </div>
+
+            <div class="company">
+                🎓
+                <h3>Future Academy</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div>
+
+            <p>ABOUT US</p>
+
+            <h2>
+                Helping people find
+                better opportunities.
+            </h2>
+
+        </div>
+
+        <p>
+            JobFinder connects talented job seekers with companies
+            looking for their next great employee. Search for jobs,
+            explore companies and find opportunities that match your skills.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <span>Job</span>Finder
+        </div>
+
+        <p>
+            © 2026 JobFinder. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JOB MODAL ================= -->
+
+    <div class="modal" id="jobModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeModal">
+                ×
+            </button>
+
+            <div id="modalContent">
+                <!-- Job details added by JavaScript -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
